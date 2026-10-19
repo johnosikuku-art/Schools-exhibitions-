@@ -1,14 +1,13 @@
-# Educate! In-school Exhibition 2026 – Results dashboard
+# Educate! In-school Exhibition 2026 – live results dashboard
 
-Single-page dashboard (`index.html`, no build step, data embedded).
+`index.html` reads the scoring Google Sheet directly (tabs Schools, Teams, CU Summary) and refreshes every 5 minutes. No data is stored in the page.
 
-## Publish on GitHub Pages
-1. Create a repository, then upload `index.html` (and this README) to the main branch.
-2. Settings → Pages → Source: "Deploy from a branch" → Branch: `main`, folder `/ (root)` → Save.
-3. After about a minute the site is live at `https://<your-username>.github.io/<repository>/`.
+## 1. Let the page read the sheet (choose one)
+- Share → General access → "Anyone with the link: Viewer", or
+- File → Share → Publish to web → "Entire document" → Publish. Copy the id from the link (the part after `/d/e/`, starting `2PACX-`) into `PUB_ID` at the top of the script in `index.html`.
 
-## Updating
-The page is a snapshot of the scoring workbook. To refresh, send the latest workbook and ask for a new `index.html`, then upload it to replace the old one.
+## 2. Publish on GitHub Pages
+Upload `index.html` to a repository → Settings → Pages → Deploy from a branch → `main` / root.
 
 ## Privacy
-The page lists school names, project names and judge names. A public repository makes all of this public.
+Anyone who can open the page can read the school, project and judge names in those tabs. Keep the repository and sheet access in line with who should see them.
