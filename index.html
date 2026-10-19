@@ -42,9 +42,9 @@ tr.q td{background:var(--acc2)}.tag{display:inline-block;padding:1px 8px;border-
 <section id="s5"><div class="card"><h2>Regional winners by CU</h2><div class="tw"><table id="wtab"></table></div><p class="note">Appears once regional scores are entered.</p></div></section>
 </main>
 <script>const $=id=>document.getElementById(id);
-const CFG={SHEET_ID:"1Kh6fgH4Qu4k4CD8Fzka6Cymc922uezwClqc02eANmRY",
- PUB_ID:"", // optional: the 2PACX-... id from File > Share > Publish to web (entire document). If set it is used instead of SHEET_ID.
- TABS:{"Schools":2011784895,"Teams":759525895,"CU Summary":336696752},
+const CFG={SHEET_ID:"18O42fGBx4lFzUCxi0xqH0QUkebteBAYKVD6fNbh1a9c",
+ PUB_ID:"2PACX-1vRltcIo98ZlNHlWBXAzYAc8BEbRx35_exuGSfKfwTV-BPgwWc0ExF0BMpWmu4YLsJoNg3-YqH1dY78g", // optional: the 2PACX-... id from File > Share > Publish to web (entire document). If set it is used instead of SHEET_ID.
+ TABS:{"Schools":0,"Teams":2029559651,"CU Summary":53214180},
  REFRESH_MIN:5};
 let CUR=0;
 function parseCSV(t){const rows=[];let r=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}else if(c=='"')q=true;else if(c==','){r.push(f);f=''}else if(c=='\n'){r.push(f);rows.push(r);r=[];f=''}else if(c!='\r')f+=c}if(f!==''||r.length){r.push(f);rows.push(r)}return rows}
